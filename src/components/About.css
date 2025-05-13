@@ -1,0 +1,11 @@
+/* src/components/About.css */
+#about .lead {
+  font-size: 1.1rem;
+  color: var(--text-muted-light);
+}
+#about img {
+  transition: transform 0.5s ease-in-out;
+}
+#about img:hover {
+  transform: scale(1.03);
+}

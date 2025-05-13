@@ -1,0 +1,298 @@
+/* src/index.css */
+:root {
+  --primary-dark: #1a1a1a;
+  --secondary-dark: #242424; /* About section background */
+  --accent-gold: #daa520;
+  --accent-gold-hover: #c0901c;
+  --text-light: #f8f9fa;   /* Very light, almost white */
+  --text-muted-light: #adb5bd; /* Lighter gray */
+  --border-color: #333;
+}
+body {
+  font-family: 'Poppins', 'Arial', sans-serif; /* Example: Add Poppins from Google Fonts */
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  line-height: 1.7;
+  overflow-x: hidden; /* Prevent horizontal scroll often caused by animations */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.accent-text {
+  color: var(--accent-gold);
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.section-title {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-gold);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-custom-gold {
+  background-color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: var(--primary-dark) !important; /* Ensure text is dark on gold button */
+  font-weight: 600;
+  padding: 10px 25px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-custom-gold:hover {
+  background-color: var(--accent-gold-hover);
+  border-color: var(--accent-gold-hover);
+}
+
+.btn-custom-outline {
+  border: 2px solid var(--accent-gold);
+  color: var(--accent-gold) !important;
+  font-weight: 600;
+  padding: 10px 25px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-custom-outline:hover {
+  background-color: var(--accent-gold);
+  color: var(--primary-dark) !important;
+}
+
+/* Basic fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Specific component styles will be added within component files or here as needed */
+.navbar-custom {
+  background-color: rgba(26, 26, 26, 0.9); /* Slightly transparent dark */
+  backdrop-filter: blur(5px);
+  padding: 15px 0;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-custom .navbar-brand {
+  color: var(--accent-gold);
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.navbar-custom .nav-link {
+  color: var(--text-light);
+  margin: 0 10px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: var(--accent-gold);
+}
+
+.navbar-custom .navbar-toggler {
+  border-color: var(--accent-gold);
+}
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28218, 165, 32, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* Add padding to body to prevent content from being hidden by fixed navbar */
+body {
+  padding-top: 80px; /* Adjust if your navbar height changes */
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--accent-gold);
+  color: var(--primary-dark);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.1);
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+/* In src/index.css */
+
+/* ... other styles ... */
+
+/* Ensure Bootstrap .btn base styles are effective if there's an issue */
+/* .btn { (Bootstrap handles this)
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+} */
+
+.btn.btn-custom-gold { /* Make it more specific to ensure it applies with .btn */
+  background-color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: var(--primary-dark) !important; /* Text color on the gold background */
+  /* .btn-sm will handle padding and font-size, so no need to repeat here unless you want to override .btn-sm */
+}
+
+.btn.btn-custom-gold:hover,
+.btn.btn-custom-gold:focus { /* Add focus state */
+  background-color: var(--accent-gold-hover);
+  border-color: var(--accent-gold-hover);
+  color: var(--primary-dark) !important;
+  outline: none; /* Remove default focus outline if you have custom focus */
+  box-shadow: 0 0 0 0.2rem rgba(218, 165, 32, 0.5); /* Custom focus glow like Bootstrap */
+}
+
+/* In src/components/Footer.css or src/index.css */
+
+.footer-section {
+  background-color: var(--primary-dark);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted-light); /* Default text color for the entire footer */
+}
+
+.footer-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-gold); /* Ensure brand is gold */
+}
+
+.footer-heading {
+  color: var(--text-light); /* Headings like "Quick Links", "Contact Us" */
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+/* For text directly under .footer-section like the brand's description */
+.footer-section > .container > .row > div > p {
+    color: var(--text-muted-light);
+}
+
+
+.footer-links li,
+.contact-info li {
+  margin-bottom: 10px;
+  color: var(--text-muted-light); /* Default for text inside these lis */
+}
+
+.footer-links a,
+.contact-info a {
+  color: var(--text-muted-light); /* For Quick Links, and phone link */
+  text-decoration: none;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-links a:hover,
+.contact-info a:hover {
+  color: var(--accent-gold);
+  padding-left: 5px; /* Optional hover effect */
+}
+
+/* Specific style for the email link to be gold */
+.footer-email-link {
+  color: var(--accent-gold) !important; /* Make it gold */
+}
+.footer-email-link:hover {
+  color: var(--accent-gold-hover) !important;
+}
+
+.social-icon {
+  color: var(--text-muted-light);
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--accent-gold);
+  transform: translateY(-3px);
+}
+
+.newsletter-form .custom-form-control {
+  background-color: var(--secondary-dark);
+  border: 1px solid var(--border-color);
+  color: var(--text-light);
+}
+.newsletter-form .custom-form-control::placeholder {
+  color: var(--text-muted-light);
+}
+.newsletter-form .custom-form-control:focus {
+  background-color: var(--secondary-dark);
+  border-color: var(--accent-gold);
+  color: var(--text-light);
+  box-shadow: 0 0 0 0.25rem rgba(218, 165, 32, 0.25);
+}
+
+/* Ensure subscribe button uses the .btn.btn-custom-gold styles already defined */
+.newsletter-form .btn.btn-custom-gold {
+  /* It should inherit from the global .btn.btn-custom-gold style */
+  /* If it's still not showing, ensure it's in the HTML and not display:none */
+
+}
+
+/* Copyright text at the bottom */
+.footer-section .text-center p { /* Target the copyright paragraph */
+  color: var(--text-muted-light); /* Ensure it's visible */
+  font-size: 0.9rem; /* Slightly smaller */
+}

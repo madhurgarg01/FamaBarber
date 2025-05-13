@@ -1,0 +1,13 @@
+/* src/components/Gallery.css */
+.gallery-item img {
+  width: 100%;
+  height: auto; /* Or set a fixed height and use object-fit: cover; */
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* No hover needed here if using framer-motion whileHover */
+.gallery-heading {
+  font-weight: bold;
+  color: white;
+}

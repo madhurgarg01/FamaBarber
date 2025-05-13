@@ -1,0 +1,38 @@
+/* src/components/Contact.css */
+.contact-info-box strong {
+  color: var(--text-light);
+}
+.contact-info-box a {
+  text-decoration: none;
+}
+.contact-info-box a:hover {
+  text-decoration: underline;
+}
+
+.custom-form-control {
+  background-color: var(--primary-dark);
+  border: 1px solid var(--border-color);
+  color: var(--text-light);
+  border-radius: 0.375rem; /* Bootstrap's default */
+}
+
+.custom-form-control:focus {
+  background-color: var(--primary-dark);
+  border-color: var(--accent-gold);
+  color: var(--text-light);
+  box-shadow: 0 0 0 0.25rem rgba(218, 165, 32, 0.25); /* Gold focus glow */
+}
+
+.custom-form-control::placeholder {
+  color: var(--text-muted-light);
+}
+
+.form-select.custom-form-control { /* For select dropdown arrow */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23DAA520' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+.white-text {
+  color: white;
+}
+.text-white {
+  color: white !important;
+}

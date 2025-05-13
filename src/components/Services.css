@@ -1,0 +1,22 @@
+/* src/components/Services.css */
+.service-card {
+  background-color: var(--secondary-dark);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  border: 2px solid transparent; /* For hover effect */
+  transform-style: preserve-3d; /* For 3D tilt */
+}
+
+.service-icon i {
+  font-size: 3rem;
+}
+
+.service-items li {
+  margin-bottom: 8px;
+  text-align: left;
+  font-size: 0.95rem;
+  color: var(--text-muted-light);
+}

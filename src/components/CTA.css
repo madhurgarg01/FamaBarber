@@ -1,0 +1,22 @@
+/* src/components/CTA.css */
+.cta-section {
+  background-color: var(--accent-gold);
+  color: var(--primary-dark); /* Text color on gold background */
+}
+.cta-section .btn-dark {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: var(--text-light) !important;
+}
+.cta-section .btn-dark:hover {
+  background-color: #333; /* Slightly lighter dark */
+  border-color: #333;
+}
+.cta-section .btn-outline-dark {
+  border-color: var(--primary-dark);
+  color: var(--primary-dark) !important;
+}
+.cta-section .btn-outline-dark:hover {
+  background-color: var(--primary-dark);
+  color: var(--text-light) !important;
+}

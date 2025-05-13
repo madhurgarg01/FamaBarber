@@ -1,0 +1,13 @@
+/* src/components/Hero.css */
+.hero-section {
+  min-height: calc(100vh - 80px); /* 80px is navbar height */
+  background: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('https://images.unsplash.com/photo-1585745309009-f81aa40a6912?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80') no-repeat center center; /* Replace with your hero image */
+  background-size: cover;
+  position: relative;
+  color: var(--text-light);
+  padding: 60px 0;
+}
+
+.hero-section .display-3 {
+    line-height: 1.2;
+}

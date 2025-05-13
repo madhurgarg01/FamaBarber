@@ -1,0 +1,48 @@
+/* src/components/Footer.css */
+.footer-section {
+  background-color: var(--primary-dark); /* Slightly different from main bg if needed */
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.footer-heading {
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.footer-links li, .contact-info li {
+  margin-bottom: 10px;
+}
+
+.footer-links a, .contact-info a {
+  color: var(--text-muted-light);
+  text-decoration: none;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-links a:hover, .contact-info a:hover {
+  color: var(--accent-gold);
+  padding-left: 5px;
+}
+
+.social-icon {
+  color: var(--text-muted-light);
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--accent-gold);
+  transform: translateY(-3px);
+}
+
+.newsletter-form .form-control {
+  background-color: var(--secondary-dark); /* Different from contact form bg for contrast */
+}

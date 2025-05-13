@@ -1,0 +1,51 @@
+
+.navbar-custom .navbar-brand {
+  color: var(--accent-gold);
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.navbar-custom .nav-link {
+  color: var(--text-light); 
+  margin: 0 10px; 
+  padding: 0.5rem 1rem; 
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: var(--accent-gold);
+}
+
+
+.navbar-custom .accent-text {
+    color: var(--accent-gold);
+}
+
+/* Styles for the "Book an Appointment" button */
+.btn-custom-gold {
+  background-color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: var(--primary-dark) !important; /* Dark text on gold button, !important to ensure override */
+  /* font-weight: 600; (Bootstrap's .btn / .btn-sm might handle this) */
+  /* padding for .btn-sm is: padding: 0.25rem 0.5rem; font-size: .875rem; */
+  /* If you want it slightly larger than btn-sm but keep btn-custom-gold specific: */
+  /* padding: 0.375rem 0.75rem; */ /* This is Bootstrap's default button padding */
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  text-decoration: none; /* Just in case */
+  display: inline-block; /* Ensure it has dimensions */
+}
+
+.btn-custom-gold:hover {
+  background-color: var(--accent-gold-hover);
+  border-color: var(--accent-gold-hover);
+  color: var(--primary-dark) !important;
+}
+
+.navbar-custom .navbar-toggler {
+  border-color: var(--accent-gold);
+}
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28218, 165, 32, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
